@@ -1,4 +1,8 @@
 <?php
+// call database concetion
+// we use include_once when the file we want to include int(form.php)
+// is dependent on the included file (includes/dbConnect.php)
+include_once 'includes/dbConnect.php';
     // check if your form is submitted
 $err='';
     if(isset($_POST['register'])){
@@ -24,6 +28,10 @@ $err='';
         }
         else if(empty($usernaae)){
              $err="please filll in usernaame";
+        }
+
+        else{
+            // insert into my database
         }
     }
 
